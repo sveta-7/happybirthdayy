@@ -1,7 +1,3 @@
-/* =========================================
-   BASIC SETUP
-========================================= */
-
 * {
     box-sizing: border-box;
 }
@@ -10,204 +6,131 @@ html,
 body {
     width: 100%;
     height: 100%;
-
     margin: 0;
     padding: 0;
-
     overflow: hidden;
 }
 
 body {
-    margin: 0;
-
     font-family: Arial, sans-serif;
-
-    /* YOUR CUSTOM CURSOR */
-    cursor: url("assets/cursor.png"), auto;
+    cursor: url("cursor.png"), auto;
 }
-
-
-/* =========================================
-   HIDDEN
-========================================= */
 
 .hidden {
     display: none !important;
 }
 
-
-/* =========================================
-   ENTER SCREEN
-========================================= */
-
 #enter {
     position: fixed;
-
-    top: 0;
-    left: 0;
-
+    inset: 0;
     width: 100vw;
     height: 100vh;
-
-    background: black;
-
+    background: #000;
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     z-index: 1000;
-
-    cursor: url("assets/cursor.png"), auto;
 }
-
-
-/* =========================================
-   ENTER IMAGE
-========================================= */
 
 #enter-image {
+    display: block;
     width: 100vw;
     height: 100vh;
-
-    /*
-       Makes enter.png fill
-       the entire laptop screen.
-    */
-
     object-fit: cover;
-
-    display: block;
-
-    cursor: url("assets/cursor.png"), auto;
+    cursor: url("cursor.png"), auto;
 }
-
-
-/* =========================================
-   DESKTOP
-========================================= */
 
 #desktop {
     position: fixed;
-
-    top: 0;
-    left: 0;
-
+    inset: 0;
     width: 100vw;
     height: 100vh;
-
-    /*
-       YOUR DESKTOP BACKGROUND
-    */
-
-    background-image: url("assets/background.png");
-
+    background-image: url("background.png");
     background-size: cover;
-
     background-position: center;
-
     background-repeat: no-repeat;
-
     overflow: hidden;
-
-    cursor: url("assets/cursor.png"), auto;
+    cursor: url("cursor.png"), auto;
 }
-
-
-/* =========================================
-   FOLDERS
-========================================= */
 
 .folder {
     position: absolute;
-
     width: 110px;
-
     text-align: center;
-
     user-select: none;
-
-    cursor: url("assets/cursor.png"), pointer;
+    cursor: url("cursor.png"), pointer;
 }
-
-
-/* =========================================
-   FOLDER IMAGE
-========================================= */
 
 .folder img {
     display: block;
-
     width: 75px;
     height: 75px;
-
-    margin-left: auto;
-    margin-right: auto;
-
+    margin: 0 auto;
     object-fit: contain;
-
-    transition: transform 0.15s ease;
 }
 
+.folder span {
+    display: block;
+    margin-top: 7px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    text-shadow:
+        0 1px 3px black,
+        0 1px 6px black;
+}
 
-/* =========================================
-   FOLDER HOVER
-========================================= */
+.folder-left-1 {
+    left: 5%;
+    top: 10%;
+}
+
+.folder-left-2 {
+    left: 5%;
+    top: 40%;
+}
+
+.folder-left-3 {
+    left: 5%;
+    top: 70%;
+}
+
+.folder-right-1 {
+    right: 5%;
+    top: 5%;
+}
+
+.folder-right-2 {
+    right: 5%;
+    top: 30%;
+}
+
+.folder-right-3 {
+    right: 5%;
+    top: 55%;
+}
+
+.folder-right-4 {
+    right: 5%;
+    top: 80%;
+}
 
 .folder:hover img {
     transform: scale(1.08);
 }
 
-
-/* =========================================
-   FOLDER NAME
-========================================= */
-
-.folder span {
-    display: block;
-
-    margin-top: 7px;
-
-    color: white;
-
-    font-size: 14px;
-
-    text-align: center;
-
-    text-shadow:
-        0 1px 3px black,
-        0 1px 6px black;
-
-    pointer-events: none;
-}
-
-
-/* =========================================
-   WINDOWS
-========================================= */
-
 .window {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     width: 600px;
     min-height: 350px;
 
-    /*
-       Centers the window
-       on the desktop.
-    */
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    /*
-       Window appearance
-    */
+    display: none;
 
     background: rgba(20, 20, 20, 0.96);
-
     color: white;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -215,106 +138,57 @@ body {
     box-shadow:
         0 20px 60px rgba(0, 0, 0, 0.6);
 
-    /*
-       Windows start hidden.
-    */
-
-    display: none;
-
     z-index: 100;
-
-    cursor: url("assets/cursor.png"), auto;
 }
-
-
-/* =========================================
-   WINDOW HEADER
-========================================= */
 
 .window-header {
     width: 100%;
     height: 42px;
 
-    padding-left: 12px;
-    padding-right: 6px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
+
+    padding: 0 6px 0 12px;
 
     background: rgba(255, 255, 255, 0.08);
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-
-/* =========================================
-   WINDOW TITLE
-========================================= */
-
 .window-header span {
-    font-size: 14px;
-
     color: white;
+    font-size: 14px;
 }
-
-
-/* =========================================
-   CLOSE BUTTON
-========================================= */
 
 .window-header button {
     width: 32px;
     height: 32px;
 
     padding: 0;
-
     border: none;
 
     background: transparent;
-
     color: white;
 
     font-size: 22px;
-
     line-height: 32px;
 
-    cursor: url("assets/cursor.png"), pointer;
+    cursor: url("cursor.png"), pointer;
 }
-
-
-/* =========================================
-   CLOSE BUTTON HOVER
-========================================= */
 
 .window-header button:hover {
     background: rgba(255, 255, 255, 0.15);
 }
 
-
-/* =========================================
-   WINDOW CONTENT
-========================================= */
-
 .window-content {
     padding: 30px;
-
     color: white;
-
     font-size: 15px;
-
     line-height: 1.6;
 }
 
-
-/* =========================================
-   WINDOW CONTENT HEADING
-========================================= */
-
 .window-content h2 {
     margin-top: 0;
-
     color: white;
 }
