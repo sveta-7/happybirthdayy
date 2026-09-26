@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Brayan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="enter" class="screen">
+        <img src="assets/enter.png" alt="Enter" id="enter-image">
+    </div>
+
+    <main id="desktop" class="hidden">
+
+        <div class="folder folder-left-1" onclick="openWindow('folder1-window')">
+            <img src="assets/folder.png" alt="For You">
+            <span>For You</span>
+        </div>
+
+        <div class="folder folder-left-2" onclick="openWindow('folder2-window')">
+            <img src="assets/folder.png" alt="Folder">
+            <span>Folder</span>
+        </div>
+
+        <div class="folder folder-left-3" onclick="openWindow('folder3-window')">
+            <img src="assets/folder.png" alt="Deleted">
+            <span>Deleted</span>
+        </div>
+
+        <div class="folder folder-right-1" onclick="openWindow('folder4-window')">
+            <img src="assets/folder.png" alt="???">
+            <span>???</span>
+        </div>
+
+        <div class="folder folder-right-2" onclick="openWindow('folder5-window')">
+            <img src="assets/folder.png" alt="Notes">
+            <span>Notes</span>
+        </div>
+
+        <div class="folder folder-right-3" onclick="openWindow('folder6-window')">
+            <img src="assets/folder.png" alt="Memory Lane">
+            <span>Memory Lane</span>
+        </div>
+
+        <div class="folder folder-right-4" onclick="openWindow('folder7-window')">
+            <img src="assets/folder.png" alt="Videos">
+            <span>Videos</span>
+        </div>
+
+        <div id="folder1-window" class="window">
+            <div class="window-header">
+                <span>For You</span>
+                <button onclick="closeWindow('folder1-window')">×</button>
+            </div>
+            <div class="window-content">
+                <h2>For You</h2>
+                <p>Your content goes here.</p>
+            </div>
+        </div>
+
+        <div id="folder2-window" class="window">
+            <div class="window-header">
+                <span>Folder</span>
+                <button onclick="closeWindow('folder2-window')">×</button>
+            </div>
+            <div class="window-content">
+                <h2>Folder</h2>
+                <p>Your content goes here.</p>
+            </div>
+        </div>
+
+        <div id="folder3-window" class="window">
+            <div class="window-header">
+                <span>Deleted</span>
+                <button onclick="closeWindow('folder3-window')">×</button>
+            </div>
+            <div class="window-content">
+                <h2>Deleted</h2>
+                <p>Your content goes here.</p>
+            </div>
+        </div>
+
+        <div id="folder4-window" class="window">
+            <div class="window-header">
+                <span>???</span>
+                <button onclick="closeWindow('folder4-window')">×</button>
+            </div>
+            <div class="window-content">
+                <h2>???</h2>
+                <p>Your content goes here.</p>
+            </div>
+        </div>
+
+        <div id="folder5-window" class="window">
+            <div class="window-header">
+                <span>Notes</span>
+                <button onclick="closeWindow('folder5-window')">×</button>
+            </div>
+            <div class="window-content">
+                <h2>Notes</h2>
+                <p>Your content goes here.</p>
+            </div>
+        </div>
+
+        <div id="folder6-window" class="window">
+            <div class="window-header">
+                <span>Memory Lane</span>
+                <button onclick="closeWindow('folder6-window')">×</button>
+            </div>
+            <div class="window-content">
+                <h2>Memory Lane</h2>
+                <p>Your content goes here.</p>
+            </div>
+        </div>
+
+        <div id="folder7-window" class="window">
+            <div class="window-header">
+                <span>Videos</span>
+                <button onclick="closeWindow('folder7-window')">×</button>
+            </div>
+            <div class="window-content">
+                <h2>Videos</h2>
+                <p>Your content goes here.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
