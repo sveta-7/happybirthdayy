@@ -55,7 +55,7 @@ body {
 
 .folder {
     position: absolute;
-    width: 110px;
+    width: 150px;
     text-align: center;
     user-select: none;
     cursor: url("cursor.png"), pointer;
@@ -63,8 +63,8 @@ body {
 
 .folder img {
     display: block;
-    width: 75px;
-    height: 75px;
+    width: 140px;
+    height: 140px;
     margin: 0 auto;
     object-fit: contain;
 }
@@ -82,17 +82,17 @@ body {
 
 .folder-left-1 {
     left: 5%;
-    top: 10%;
+    top: 5%;
 }
 
 .folder-left-2 {
     left: 5%;
-    top: 40%;
+    top: 30%;
 }
 
 .folder-left-3 {
     left: 5%;
-    top: 70%;
+    top: 60%;
 }
 
 .folder-right-1 {
@@ -102,17 +102,17 @@ body {
 
 .folder-right-2 {
     right: 5%;
-    top: 30%;
+    top: 25%;
 }
 
 .folder-right-3 {
     right: 5%;
-    top: 55%;
+    top: 50%;
 }
 
 .folder-right-4 {
     right: 5%;
-    top: 80%;
+    top: 70%;
 }
 
 .folder:hover img {
