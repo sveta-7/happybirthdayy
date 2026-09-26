@@ -39,6 +39,48 @@ body {
     object-fit: cover;
     cursor: url("cursor.png"), auto;
 }
+#typewriter {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+
+    color: white;
+    font-size: 24px;
+    font-family: monospace;
+
+    white-space: nowrap;
+    overflow: hidden;
+
+    border-right: 2px solid white;
+
+    width: 0;
+
+    animation:
+        typing 2.5s steps(14, end) forwards,
+        blinking-cursor 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 14ch;
+    }
+}
+
+@keyframes blinking-cursor {
+    0%,
+    100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
+}
 
 #desktop {
     position: fixed;
