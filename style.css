@@ -46,6 +46,7 @@ body {
     transform: translateX(-50%);
 
     color: black;
+    background-color: yellow;
     font-size: 28px;
     font-family: monospace;
 
