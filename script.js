@@ -1,11 +1,16 @@
 const enterImage = document.getElementById("enter-image");
 const enterScreen = document.getElementById("enter");
 const desktop = document.getElementById("desktop");
+const backgroundMusic = document.getElementById("backgroundMusic");
 
 enterImage.addEventListener("click", function () {
     enterScreen.classList.add("hidden");
     desktop.classList.remove("hidden");
+
+    // Start background music
+    backgroundMusic.play();
 });
+
 
 function openWindow(windowID) {
     const windowElement = document.getElementById(windowID);
@@ -14,7 +19,18 @@ function openWindow(windowID) {
         windowElement.style.display = "block";
         windowElement.style.zIndex = "101";
     }
+
+    // Play carousel video when "For You" opens
+    if (windowID === "folder1-window") {
+        const carouselVideo = document.getElementById("carouselVideo");
+
+        if (carouselVideo) {
+            carouselVideo.currentTime = 0;
+            carouselVideo.play();
+        }
+    }
 }
+
 
 function closeWindow(windowID) {
     const windowElement = document.getElementById(windowID);
@@ -22,7 +38,18 @@ function closeWindow(windowID) {
     if (windowElement) {
         windowElement.style.display = "none";
     }
+
+    // Stop carousel video when "For You" closes
+    if (windowID === "folder1-window") {
+        const carouselVideo = document.getElementById("carouselVideo");
+
+        if (carouselVideo) {
+            carouselVideo.pause();
+            carouselVideo.currentTime = 0;
+        }
+    }
 }
+
 
 const windows = document.querySelectorAll(".window");
 
@@ -35,3 +62,4 @@ windows.forEach(function (windowElement) {
         windowElement.style.zIndex = "101";
     });
 });
+
