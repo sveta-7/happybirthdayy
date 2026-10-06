@@ -42,8 +42,15 @@ function openWindow(windowID) {
             cupidVideo.play();
         }
     }
-}
+    if (windowID === "folder3-window") {
+        const camcorderVideo = document.getElementById("camcorderVideo");
 
+        if (camcorderVideo) {
+            camcorderVideo.currentTime = 0;
+            camcorderVideo.play();
+        }
+    }
+ }
 
 function closeWindow(windowID) {
     const windowElement = document.getElementById(windowID);
@@ -71,8 +78,15 @@ function closeWindow(windowID) {
             cupidVideo.currentTime = 0;
         }
     }
-}
+    if (windowID === "folder3-window") {
+        const camcorderVideo = document.getElementById("camcorderVideo");
 
+        if (camcorderVideo) {
+            camcorderVideo.pause();
+            camcorderVideo.currentTime = 0;
+        }
+    }
+}
 
 const windows = document.querySelectorAll(".window");
 
