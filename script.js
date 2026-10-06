@@ -3,6 +3,8 @@ const enterScreen = document.getElementById("enter");
 const desktop = document.getElementById("desktop");
 const backgroundMusic = document.getElementById("backgroundMusic");
 
+
+// ENTER SCREEN
 enterImage.addEventListener("click", function () {
     enterScreen.classList.add("hidden");
     desktop.classList.remove("hidden");
@@ -12,6 +14,7 @@ enterImage.addEventListener("click", function () {
 });
 
 
+// OPEN WINDOWS
 function openWindow(windowID) {
     const windowElement = document.getElementById(windowID);
 
@@ -27,6 +30,16 @@ function openWindow(windowID) {
         if (carouselVideo) {
             carouselVideo.currentTime = 0;
             carouselVideo.play();
+        }
+    }
+
+    // Play cupid video when "For You Too" opens
+    if (windowID === "folder7-window") {
+        const cupidVideo = document.getElementById("cupidVideo");
+
+        if (cupidVideo) {
+            cupidVideo.currentTime = 0;
+            cupidVideo.play();
         }
     }
 }
@@ -46,6 +59,16 @@ function closeWindow(windowID) {
         if (carouselVideo) {
             carouselVideo.pause();
             carouselVideo.currentTime = 0;
+        }
+    }
+
+    // Stop cupid video when "For You Too" closes
+    if (windowID === "folder7-window") {
+        const cupidVideo = document.getElementById("cupidVideo");
+
+        if (cupidVideo) {
+            cupidVideo.pause();
+            cupidVideo.currentTime = 0;
         }
     }
 }
