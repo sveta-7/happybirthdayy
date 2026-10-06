@@ -245,6 +245,15 @@ body {
     display: block;
     margin: 0 auto;
 }
+#cupidVideo {
+    width: 100%;
+    max-width: 100%;
+    max-height: 60vh;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
 .memory-lane-content {
     display: flex;
     justify-content: center;
@@ -260,6 +269,7 @@ body {
     height: auto;
     object-fit: contain;
 }
+
 /* =========================
    PHONE / SMALL SCREENS
    ========================= */
@@ -397,29 +407,75 @@ body {
     }
 
 
-    /* VIDEOS */
+        /* =========================
+       VIDEOS
+       ========================= */
 
     #carouselVideo,
-    #cupidVideo {
+    #camcorderVideo {
+        display: block;
         width: 100%;
         max-width: 100%;
-        max-height: 50dvh;
-
         height: auto;
-
+        max-height: 50dvh;
         object-fit: contain;
-        display: block;
         margin: 0 auto;
     }
+
+    /* Cupid stays deliberately smaller */
     #cupidVideo {
-    display: block;
-    width: min(100%, 600px);
-    max-height: 65vh;
-    height: auto;
-    object-fit: contain;
-    margin: 0 auto;
+        display: block;
+        width: 75% !important;
+        max-width: 400px !important;
+        height: auto !important;
+        max-height: 45dvh !important;
+        object-fit: contain;
+        margin: 10px auto;
+    }
 }
 
+
+/* =========================
+   VERY SMALL PHONES
+   ========================= */
+
+@media (max-width: 380px) {
+
+    .folder {
+        width: 75px;
+    }
+
+    .folder img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .folder span {
+        font-size: 11px;
+    }
+
+    .window {
+        width: 92vw;
+        max-width: 92vw;
+        max-height: 88dvh;
+    }
+
+    .window-content {
+        padding: 14px;
+        font-size: 13px;
+    }
+
+    #carouselVideo,
+    #camcorderVideo {
+        max-height: 45dvh;
+    }
+
+    #cupidVideo {
+        width: 75% !important;
+        max-width: 320px !important;
+        max-height: 40dvh !important;
+    }
+}
 
 /* =========================
    VERY SMALL PHONES
