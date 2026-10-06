@@ -269,7 +269,21 @@ body {
     height: auto;
     object-fit: contain;
 }
+.folder3-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
 
+#kazu-image {
+    display: block;
+    max-width: 100%;
+    max-height: 60vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
 /* =========================
    PHONE / SMALL SCREENS
    ========================= */
@@ -411,8 +425,7 @@ body {
        VIDEOS
        ========================= */
 
-    #carouselVideo,
-    #camcorderVideo {
+    #carouselVideo {
         display: block;
         width: 100%;
         max-width: 100%;
