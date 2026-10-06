@@ -397,6 +397,13 @@ body {
         display: block;
         margin: 0 auto;
     }
+    #cupidVideo {
+    display: block;
+    width: min(100%, 600px);
+    max-height: 65vh;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
 }
 
 
