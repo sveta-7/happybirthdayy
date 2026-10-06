@@ -246,3 +246,193 @@ body {
     margin: 0 auto;
 }
 
+/* =========================
+   PHONE / SMALL SCREENS
+   ========================= */
+
+@media (max-width: 600px) {
+
+    /* Keep the enter screen fitted to the phone */
+    #enter {
+        width: 100vw;
+        height: 100dvh;
+    }
+
+    #enter-image {
+        width: 100vw;
+        height: 100dvh;
+        object-fit: cover;
+    }
+
+    #typewriter {
+        font-size: 20px;
+        bottom: 12%;
+    }
+
+
+    /* Desktop background */
+    #desktop {
+        width: 100vw;
+        height: 100dvh;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+
+    /* FOLDERS */
+
+    .folder {
+        width: 90px;
+    }
+
+    .folder img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .folder span {
+        margin-top: 4px;
+        font-size: 12px;
+    }
+
+
+    /* LEFT FOLDERS */
+
+    .folder-left-1 {
+        left: 4%;
+        top: 5%;
+    }
+
+    .folder-left-2 {
+        left: 4%;
+        top: 28%;
+    }
+
+    .folder-left-3 {
+        left: 4%;
+        top: 51%;
+    }
+
+
+    /* RIGHT FOLDERS */
+
+    .folder-right-1 {
+        right: 4%;
+        top: 5%;
+    }
+
+    .folder-right-2 {
+        right: 4%;
+        top: 28%;
+    }
+
+    .folder-right-3 {
+        right: 4%;
+        top: 51%;
+    }
+
+    .folder-right-4 {
+        right: 4%;
+        top: 74%;
+    }
+
+
+    /* WINDOWS */
+
+    .window {
+        width: 90vw;
+        max-width: 90vw;
+        min-height: 0;
+        max-height: 85dvh;
+
+        overflow-y: auto;
+
+        top: 50%;
+        left: 50%;
+    }
+
+
+    /* WINDOW HEADER */
+
+    .window-header {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .window-header span {
+        font-size: 13px;
+    }
+
+    .window-header button {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+
+    /* WINDOW CONTENT */
+
+    .window-content {
+        padding: 18px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .window-content h2 {
+        font-size: 20px;
+    }
+
+
+    /* VIDEOS */
+
+    #carouselVideo,
+    #cupidVideo {
+        width: 100%;
+        max-width: 100%;
+        max-height: 50dvh;
+
+        height: auto;
+
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+   ========================= */
+
+@media (max-width: 380px) {
+
+    .folder {
+        width: 75px;
+    }
+
+    .folder img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .folder span {
+        font-size: 11px;
+    }
+
+    .window {
+        width: 92vw;
+        max-width: 92vw;
+        max-height: 88dvh;
+    }
+
+    .window-content {
+        padding: 14px;
+        font-size: 13px;
+    }
+
+    #carouselVideo,
+    #cupidVideo {
+        max-height: 45dvh;
+    }
+}
+
